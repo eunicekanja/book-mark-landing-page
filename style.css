@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+button,.question img{
+    cursor: pointer;
+}
+:root{
+--SoftBlue:hsl(231, 69%, 60%);
+--SoftRed: hsl(0, 94%, 66%);
+--GrayishBlue: hsl(229, 8%, 60%);
+--VeryDarkBlue: hsl(229, 31%, 21%);
+--FontSize: 18px;
+--primary-font:'Rubik', sans-serif;
+}
+/*global styles*/
+.section{
+  padding:2.5rem 1.3rem 4rem 1.3rem;  
+}
+.primary{
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+.secondary{
+    text-align: center;
+    padding: 0 2rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+.primary2{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 19px;
+}
+.secondary2{
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+/*header*/
+
+/*section-a*/
+.button-grid{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+    color:black;
+   font-size: 15.5px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.btn:hover{
+    color: white;
+    background-color: var(--SoftBlue);
+}
+/*section-b*/
+.section-b-buttonContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 4rem 0 ;
+}
+.tabBtn{
+    border: none;
+    border-bottom: 1.5px solid gainsboro;
+    background-color: transparent;
+    padding: 1rem 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.tabBtn.active{
+    border-bottom: 1.5px solid red;
+}
+.tab-text{
+    padding: 2rem 0 4rem 0;
+}
+/*section-c*/
+.grid-3{
+    padding:2rem 1.3rem;
+    text-align: center;
+}
+.grid3Img{
+    width: 100px;
+    margin-bottom: 1.5rem;
+}
+.dots{
+    width: 100%;
+}
+.section-c-grid1{
+padding: 3rem 0 2rem 0;
+border: 1px solid gainsboro;
+margin-bottom: 2rem;
+border-radius: 7px;
+}
+.section-c-grid1 .tab-text-btn{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background-color: var(--SoftBlue);
+    color: white;
+    font-size: 15px;
+}
+/*section-d*/
+.section-d img{
+    width: 15px;
+    height: 10px;
+    color: var(--SoftBlue);
+}
+.question-container{
+    padding: 1rem 0;
+    border-bottom: 1.5px solid gainsboro;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    padding-right: rem;
+}
+.awnser{
+    display: none;
+}
+.section-d-btn{
+    display: grid;
+}
+.section-d .btn{
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    margin: 2rem 0;
+}
+/*section-e*/
+.section-e{
+    background-color: var(--SoftBlue);
+    padding: 3rem 1.3rem;
+    text-align: center;
+    color: white;
+}
+.section-e-btn{
+    text-align: center;
+}
+#email{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.section--btn{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    text-transform: capitalize;
+}
+.section--btn:hover{
+    background-color: var(--SoftRed);
+    color: white;
+}
+.icon-close{
+    background-color: var(--SoftBlue);
+}
+.hide.icon-arrow{
+    display: none;
+}
+.hide.icon-close{
+    display: none;
+}
+/*footer*/
+.footer{
+    background-color: var(--VeryDarkBlue);
+    padding: 2rem 1.3rem 3rem 1.3rem;
+    text-align: center;
+}
+.footer-icons img{
+    height: 30px;
+    width: 30px;
+    margin: 12px;
+}
+.footer .logo{
+    color: white;
+    background-color: white;
+}
+.footer .primary{
+    color: white;
+}
+.footer-links li{
+    padding: 10px 0;
+}
+.footer-links li a{
+    color: white;
+    font-weight: 300;
+}
+/*active classes*/
+.tab-container{
+    display: none;
+}
+.tab-container.active{
+    display: block;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+}
+.awnser.active{
+    display: block;
+}
+/*media query*/
+@media screen and (min-width:375px) and (max-width:768px){
+    .head{
+        justify-content: space-between;
+        padding: 20px 30px;
+        color: white;
+    }
+.head.active{
+    background-color: var(--SoftRed);
+}
+.head-linksContainer.active{
+    display: block;
+}
+.head-links a{
+    color: var(--VeryDarkBlue);
+    text-transform: uppercase;
+}
+
+.head-links li{
+    padding: 2rem 0;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--VeryDarkBlue);
+}
+.show.head-linksContainer{
+    display: block;
+}
+.menu-button{
+    cursor: pointer;
+}
+.head-linksContainer{
+    display: none;
+    backdrop-filter: blur(9px);
+    padding:2rem;
+    background-color: var(--VeryDarkBlues);
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 85vh;
+    font-weight: 600;
+}
+.head-login{
+    border: 2px solid var(--VeryDarkBlue);
+    padding: 10px;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--VeryDarkBlue);
+    font-weight: 600;
+}
+.head-linksContainer .footer-icons{
+    padding: 7rem 0 0 0;
+    color: var(--VeryDarkBlue);
+    display: none;
+}
+.tab-text .tab-text-btn{
+    display: none;
+}
+.tabBtn:first-child,.tabBtn:last-child{
+    border-top: 1.5px solid gainsboro;
+}
+}
+@media screen and (min-width:768px) {
+    .main-section{
+        padding: 2rem 5rem;
+    }
+    .menu{
+        display: none;
+    }
+    .head-linksContainer .footer-icons{
+        display: none;
+    }
+
+    .head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 5rem;
+    }
+    .head-linksContainer,.head-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .head-links li{
+        padding: 0 2rem;
+    }
+    .head-links a{
+        color: black;
+    }
+    .head-login{
+        padding: 2px 10px;
+        border-radius: 4px;
+        border: none;
+        text-transform: capitalize;
+        background-color: transparent;
+    }
+    .head-login:hover{
+        background-color: var(--SoftRed);
+        color: white;
+    }
+    .grid-2{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 't t i i'
+        't t i i';
+    }
+    .section-a-image{
+        grid-area: i;
+    }
+    .section-a-text{
+        grid-area: t;
+        padding: 3rem 0;
+    }
+    .section-a-text .primary,.tab-text .primary{
+        text-align: left;
+    }
+    .section-a-text .secondary,.tab-text .secondary{
+        text-align: left;
+        padding: 0;
+    }
+    .button-grid{
+        text-align: left;
+    }
+    .button-grid .btn{
+    text-align: center;
+    padding: 10px 2rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+    margin: 2rem 0;
+    }
+    /*section b*/
+    .section-b-intro,.section-c-intro,.section-d{
+        padding: 0 18rem;
+    }
+    .section-e{
+        padding:3rem 18rem ;
+    }
+    .section-b-intro .secondary{
+        text-align: center;
+    }
+    .section-b-buttonContainer{
+        display: flex;
+        flex-direction: row;
+        padding: 3rem 14rem;
+    }
+    .tabBtn{
+        padding: 0 2rem;
+    }
+    .tab{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+    }
+    .tab-text{
+        padding: 4rem 0;
+    }
+    .tab-text-btn{
+        margin: 2rem 0;
+    }
+    /*section-c*/
+    .grid-3{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;
+    }
+    .section-c-grid1{
+        margin-bottom: 1rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-links li{
+        padding: 10px 3rem;
+    }
+}
