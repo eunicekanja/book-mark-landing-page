@@ -220,7 +220,7 @@ border-radius: 7px;
     display: block;
 }
 /*media query*/
-@media screen and (min-width:375px) and (max-width:768px){
+@media screen and (max-width:768px){
     .head{
         justify-content: space-between;
         padding: 20px 30px;
